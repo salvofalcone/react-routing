@@ -13,7 +13,7 @@ export default function Location() {
   return (
     <div className={style.Card}>
       <div className={style.Card__Top}>
-        <h3 className={style.Card__Title}>{currentRoom.name}</h3>
+        <h2 className={style.Card__Title}>{currentRoom.name}</h2>
         <p className={style.Card__Location}>{currentRoom.location}</p>
       </div>
       <div className={style.Card__Images}>
