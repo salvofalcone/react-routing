@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
 
-import "./App.css";
 import style from "./App.module.scss";
+import DefaultLayout from "./layouts/defaultLayout";
 
 function App() {
   return (
     <>
       <div className={style.App}>
-        <Navbar />
-        <Outlet />
+        <DefaultLayout>
+          <Outlet />
+        </DefaultLayout>
       </div>
     </>
   );

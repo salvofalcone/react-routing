@@ -82,7 +82,7 @@ export default function () {
 
       <div className={style.Cards}>
         {roomList.map((room) => (
-          <div className={style.Card} onClick={() => onHandleClick(room.id)}>
+          <div className={style.Card} onClick={() => onHandleClick(room.id)} key={room.id}>
             <img
               src={room.imageLocation}
               alt={room.name}

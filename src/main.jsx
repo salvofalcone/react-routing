@@ -11,6 +11,7 @@ import Contacts from "./routes/contacts/";
 import Locations from "./routes/locations/";
 import Location from "./routes/locations/location.jsx";
 
+
 import "./index.css";
 
 const router = createBrowserRouter([
