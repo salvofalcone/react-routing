@@ -1,1 +1,6 @@
-export const auth = { username: "pippo", password: "ciao" };
+export const auth = {
+  username: "user",
+  password: "pass",
+  name: "Salvo",
+  surname: "Falcone",
+};

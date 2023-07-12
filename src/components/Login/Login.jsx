@@ -18,6 +18,7 @@ const Login = () => {
 
     try {
       if (auth.username === username && auth.password === password) {
+        localStorage.setItem("auth", true);
         navigate("/dashboard");
       }
       throw new Error("Credenziali non valide");
@@ -28,15 +29,23 @@ const Login = () => {
 
   return (
     <div className={styles.Login}>
-      <form onSubmit={onHandleSubmit}>
-        <input value={username} type="text" placeholder="Username" required />
+      <form onSubmit={onHandleSubmit} className={styles.Login__Form}>
+        <h2>Log In</h2>
         <input
-          value={password}
-          type="password"
-          placeholder="Password"
+          /* value={username} */
+          type="text"
+          placeholder="Username"
+          onChange={onHandleUsername}
           required
         />
-        <input type="submit" value="Log In" />
+        <input
+          /* value={password} */
+          type="password"
+          placeholder="Password"
+          onChange={onHandlePassword}
+          required
+        />
+        <input type="submit" value="Log In" className={styles.Login__Submit} />
       </form>
     </div>
   );
