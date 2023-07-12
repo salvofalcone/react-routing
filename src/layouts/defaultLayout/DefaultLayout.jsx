@@ -1,14 +1,15 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-import style from "./index.module.scss";
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
-const DefaultLayout = ({ children }) => {
+import styles from "./index.module.scss";
+
+const DefaultLayout = () => {
   return (
-    <div>
+    <div className={styles.Main}>
       <Navbar />
-      {children}
+      <Outlet />
       <Footer />
     </div>
   );

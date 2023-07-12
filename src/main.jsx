@@ -1,52 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { router } from "./routes/main";
 
-import App from "./App.jsx";
-import Error from "./routes/error.jsx";
-import Home from "./routes/home/";
-import About from "./routes/about/";
-import Contacts from "./routes/contacts/";
-import Locations from "./routes/locations/";
-// import Login from "./routes/login/index.jsx";
-import Location from "./routes/locations/location.jsx";
-
-import "./index.css";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <Error />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contacts",
-        element: <Contacts />,
-      },
-      {
-        path: "/locations",
-        element: <Locations />,
-      },
-      {
-        path: "/locations/:id",
-        element: <Location />,
-      },
-      // {
-      //   path: "/login",
-      //   element: <Login />,
-      // },
-    ],
-  },
-]);
+import { RouterProvider } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
