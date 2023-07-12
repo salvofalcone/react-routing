@@ -9,8 +9,8 @@ import Home from "./routes/home/";
 import About from "./routes/about/";
 import Contacts from "./routes/contacts/";
 import Locations from "./routes/locations/";
+// import Login from "./routes/login/index.jsx";
 import Location from "./routes/locations/location.jsx";
-
 
 import "./index.css";
 
@@ -40,6 +40,10 @@ const router = createBrowserRouter([
         path: "/locations/:id",
         element: <Location />,
       },
+      // {
+      //   path: "/login",
+      //   element: <Login />,
+      // },
     ],
   },
 ]);
