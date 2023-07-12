@@ -27,7 +27,7 @@ export default function Dashboard() {
       <h2>Dashboard</h2>
       <p>Welcome back, {auth.name}! </p>
 
-      <div className={styles.Logout} onClick={()=>setIsLogged(false)}>
+      <div className={styles.Logout} onClick={() => setIsLogged(false)}>
         <BiLogOut />
       </div>
     </div>

@@ -20,8 +20,10 @@ const Login = () => {
       if (auth.username === username && auth.password === password) {
         localStorage.setItem("auth", true);
         navigate("/dashboard");
+      } else {
+        alert("Qualcosa è andato storto!")
+        throw new Error("Credenziali non valide");
       }
-      throw new Error("Credenziali non valide");
     } catch (error) {
       console.log(error);
     }
